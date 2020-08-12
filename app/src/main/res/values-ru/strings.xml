@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">GB Погода</string>
+    <string name="Hello">GB Погода</string>
+    <string name="helloButton">Привет!</string>
+    <string name="FirstProgram">Это моя первая программа на андроиде!</string>
+    <string name="choose_location">Выберите локацию</string>
+    <string name="radiobutton1">Санкт-Петербург</string>
+    <string name="radiobutton2">Вильнюс</string>
+    <string name="radiobutton3">Тенерифе</string>
+    <string name="city">Санкт-Петербург</string>
+    <string name="cityV">Вильнюс</string>
+    <string name="cityT">Тенерифе</string>
+    <string name="temperature">Температура(C):</string>
+    <string name="humidity">Влажность:</string>
+    <string name="pressure">Давление:</string>
+    <string name="precipitation">Осадки:</string>
+    <string name="condition">Состояние погоды:</string>
+    <string name="weatherForecast">Прогноз погоды на три дня</string>
+    <string name="cityTemp">+15,4</string>
+    <string name="cityHumid">78%</string>
+    <string name="cityPressure">767 мм рт. ст.</string>
+    <string name="cityPrecep">Дождь</string>
+    <string name="cityCond">Пасмурно</string>
+    <string name="cityTempV">+18</string>
+    <string name="cityHumidV">53%</string>
+    <string name="cityPressureV">749 рт. ст.</string>
+    <string name="cityPrecepV">нет</string>
+    <string name="cityCondV">Облачно</string>
+    <string name="cityTempT">+27,1</string>
+    <string name="cityHumidT">58%</string>
+    <string name="cityPressureT">738 рт. ст.</string>
+    <string name="cityPrecepT">нет</string>
+    <string name="cityCondT">Ясно</string>
+    <string name="friday">Пятница</string>
+    <string name="sat">Суббота</string>
+    <string name="sunday">Воскресенье</string>
+    <string name="fdt">"Т днем: "</string>
+    <string name="fnt">"Т ночью: "</string>
+</resources>
