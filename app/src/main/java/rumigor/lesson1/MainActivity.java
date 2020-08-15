@@ -35,71 +35,16 @@ public class MainActivity extends AppCompatActivity {
         final ImageView fw = findViewById(R.id.frImg);
         final ImageView stw = findViewById(R.id.satImg);
         final ImageView sunW = findViewById(R.id.sunImg);
-        View.OnClickListener radioButtonClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RadioButton rb = (RadioButton)v;
-                switch (rb.getId()){
-                    case R.id.StPetersburg:
-                        city.setText(getResources().getText(R.string.city));
-                        temp.setText(getResources().getText(R.string.cityTemp));
-                        humid.setText(getResources().getText(R.string.cityHumid));
-                        press.setText(getResources().getText(R.string.cityPressure));
-                        precip.setText(getResources().getText(R.string.cityPrecep));
-                        wCond.setText(getResources().getText(R.string.cityCond));
-                        mainImage.setImageResource(R.drawable.rainy);
-                        frDTemp.setText(getResources().getText(R.string.fdt)+" +20");
-                        frNTemp.setText(getResources().getText(R.string.fnt)+" +11");
-                        stDTemp.setText(getResources().getText(R.string.fdt)+" +21");
-                        stNTemp.setText(getResources().getText(R.string.fnt) + " +15");
-                        sunDTemp.setText(getResources().getText(R.string.fdt)+ " +22");
-                        sunNTemp.setText(getResources().getText(R.string.fnt)+ " +16");
-                        fw.setImageResource(R.drawable.cloudy);
-                        stw.setImageResource(R.drawable.rainy);
-                        sunW.setImageResource(R.drawable.party_cloudy);
-                        break;
-                    case R.id.Vilnius:
-                        city.setText(getResources().getText(R.string.cityV));
-                        temp.setText(getResources().getText(R.string.cityTempV));
-                        humid.setText(getResources().getText(R.string.cityHumidV));
-                        press.setText(getResources().getText(R.string.cityPressureV));
-                        precip.setText(getResources().getText(R.string.cityPrecepV));
-                        wCond.setText(getResources().getText(R.string.cityCondV));
-                        mainImage.setImageResource(R.drawable.cloudy);
-                        frDTemp.setText(getResources().getText(R.string.fdt)+" +23");
-                        frNTemp.setText(getResources().getText(R.string.fnt)+" +16");
-                        stDTemp.setText(getResources().getText(R.string.fdt)+" +26");
-                        stNTemp.setText(getResources().getText(R.string.fnt) + " +18");
-                        sunDTemp.setText(getResources().getText(R.string.fdt)+ " +28");
-                        sunNTemp.setText(getResources().getText(R.string.fnt)+ " +25");
-                        fw.setImageResource(R.drawable.cloudy);
-                        stw.setImageResource(R.drawable.party_cloudy);
-                        sunW.setImageResource(R.drawable.sun2);
-                        break;
-                    case R.id.Tenerife:
-                        city.setText(getResources().getText(R.string.cityT));
-                        temp.setText(getResources().getText(R.string.cityTempT));
-                        humid.setText(getResources().getText(R.string.cityHumidT));
-                        press.setText(getResources().getText(R.string.cityPressureT));
-                        precip.setText(getResources().getText(R.string.cityPrecepT));
-                        wCond.setText(getResources().getText(R.string.cityCondT));
-                        mainImage.setImageResource(R.drawable.sun2);
-                        frDTemp.setText(getResources().getText(R.string.fdt)+" +27");
-                        frNTemp.setText(getResources().getText(R.string.fnt)+" +21");
-                        stDTemp.setText(getResources().getText(R.string.fdt)+" +27");
-                        stNTemp.setText(getResources().getText(R.string.fnt) + " +22");
-                        sunDTemp.setText(getResources().getText(R.string.fdt)+ " +27");
-                        sunNTemp.setText(getResources().getText(R.string.fnt)+ " +24");
-                        fw.setImageResource(R.drawable.party_cloudy);
-                        stw.setImageResource(R.drawable.sun2);
-                        sunW.setImageResource(R.drawable.sun2);
-                        break;
-                }
-            }
+        frDTemp.setText(getResources().getText(R.string.fdt)+" +20");
+        frNTemp.setText(getResources().getText(R.string.fnt)+" 11");
+        stDTemp.setText(getResources().getText(R.string.fdt)+" +21");
+        stNTemp.setText(getResources().getText(R.string.fnt)+" 15");
+        sunDTemp.setText(getResources().getText(R.string.fdt)+" +22");
+        sunNTemp.setText(getResources().getText(R.string.fnt)+" 16");
 
-        };
-        spb.setOnClickListener(radioButtonClickListener);
-        vln.setOnClickListener(radioButtonClickListener);
-        tfn.setOnClickListener(radioButtonClickListener);
+        Button chgCity = findViewById(R.id.chgCity);
+
+        chgCity.setOnClickListener();
+
     }
 }

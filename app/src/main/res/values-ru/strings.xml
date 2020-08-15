@@ -37,4 +37,10 @@
     <string name="sunday">Воскресенье</string>
     <string name="fdt">"Т днем: "</string>
     <string name="fnt">"Т ночью: "</string>
+    <string name="chgCity">"Выбрать город"</string>
+    <string name="settings">"Настройки"</string>
+    <string name="choose_city">Выберите город</string>
+    <string name="type_city_name">Введите название города</string>
+    <string name="search">Поиск</string>
+    <string name="change_city">Поменять город</string>
 </resources>
