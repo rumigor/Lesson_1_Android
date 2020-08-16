@@ -42,4 +42,16 @@
     <string name="type_city_name">Type city name</string>
     <string name="search">Search</string>
     <string name="change_city">Change city</string>
+    <string name="city_name">City name</string>
+    <string name="extra_options">Extra options</string>
+    <string name="show_wind_speed">Show wind speed</string>
+    <string name="show_sunrise_and_sunset_time">Show sunrise and sunset time</string>
+    <string name="probability_of_precipitation">Probability of precipitation</string>
+    <string name="allergic_hazard_level">Allergic hazard level</string>
+    <string name="settingsTitle">Settings</string>
+    <string name="save_settings">Save settings</string>
+    <string name="dark_theme">Dark theme</string>
+    <string name="degree">Degree</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celcius">Celsius</string>
 </resources>

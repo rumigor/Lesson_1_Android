@@ -43,4 +43,16 @@
     <string name="type_city_name">Введите название города</string>
     <string name="search">Поиск</string>
     <string name="change_city">Поменять город</string>
+    <string name="city_name">Название города</string>
+    <string name="extra_options">Дополнительные параметры</string>
+    <string name="show_wind_speed">Показать скорость ветра</string>
+    <string name="show_sunrise_and_sunset_time">Показать время восхода и заката солнца</string>
+    <string name="probability_of_precipitation">Вероятность осадков</string>
+    <string name="allergic_hazard_level">Уровень аллергической опасности</string>
+    <string name="settingsTitle">Настройки</string>
+    <string name="save_settings">Сохранить</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="degree">Градусы</string>
+    <string name="fahrenheit">Фаренгейт</string>
+    <string name="celcius">Целсий</string>
 </resources>
