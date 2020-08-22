@@ -18,6 +18,7 @@ import android.widget.Toast;
 public class SettingsActivity extends AppCompatActivity {
     private Switch theme;
     private final String NIGHT_MODE = "Night_Mode";
+    private final static int REQUEST_CODE = 0x1FAB;
     ConstraintLayout layout;
 
     @Override
@@ -100,5 +101,10 @@ public class SettingsActivity extends AppCompatActivity {
             theme.setChecked(false);
             layout.setBackgroundColor(Color.argb(100, 164, 221, 248));
         }
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode) {
+        super.startActivityForResult(intent, requestCode);
     }
 }

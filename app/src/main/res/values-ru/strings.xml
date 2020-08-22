@@ -17,17 +17,17 @@
     <string name="precipitation">Осадки:</string>
     <string name="condition">Состояние погоды:</string>
     <string name="weatherForecast">Прогноз погоды на три дня</string>
-    <string name="cityTemp">+15,4</string>
+    <string name="cityTemp">+15,4°С</string>
     <string name="cityHumid">78%</string>
     <string name="cityPressure">767 мм рт. ст.</string>
     <string name="cityPrecep">Дождь</string>
     <string name="cityCond">3</string>
-    <string name="cityTempV">+18</string>
+    <string name="cityTempV">+18°С</string>
     <string name="cityHumidV">53%</string>
     <string name="cityPressureV">749 рт. ст.</string>
     <string name="cityPrecepV">нет</string>
     <string name="cityCondV">2</string>
-    <string name="cityTempT">+27,1</string>
+    <string name="cityTempT">+27,1°С</string>
     <string name="cityHumidT">58%</string>
     <string name="cityPressureT">738 рт. ст.</string>
     <string name="cityPrecepT">нет</string>
@@ -55,4 +55,5 @@
     <string name="degree">Градусы</string>
     <string name="fahrenheit">Фаренгейт</string>
     <string name="celcius">Целсий</string>
+    <string name="more_on_gismeteo">Больше на Гисметео</string>
 </resources>

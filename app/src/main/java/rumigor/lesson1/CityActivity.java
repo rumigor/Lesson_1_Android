@@ -1,6 +1,7 @@
 package rumigor.lesson1;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,23 +15,26 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.Serializable;
 
 
-public class CityActivity extends AppCompatActivity {
+public class CityActivity extends AppCompatActivity implements Constants {
+    private static final int REQUEST_CODE =  0x1FAB;
     WeatherParameters weatherParameters;
     private static final String CITY_NAME = "cityName";
     private EditText inputText;
-
+    RadioButton spb;
+    RadioButton vilnius;
+    RadioButton tenerife;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        weatherParameters = WeatherParameters.getInstance();
         Toast.makeText(getApplicationContext(), "onCreate#2", Toast.LENGTH_SHORT).show();
         Log.d("CityActivity", "onCreate");
         setContentView(R.layout.city_changer);
-        RadioButton spb = findViewById(R.id.city1);
-        RadioButton vilnius = findViewById(R.id.city2);
-        RadioButton tenerife = findViewById(R.id.city3);
+        spb = findViewById(R.id.city1);
+        vilnius = findViewById(R.id.city2);
+        tenerife = findViewById(R.id.city3);
         Button changeCity = findViewById(R.id.citychanger);
         Button cancel = findViewById(R.id.cancelButton);
         cancel.setOnClickListener(new View.OnClickListener() {
@@ -44,53 +48,30 @@ public class CityActivity extends AppCompatActivity {
             public void onClick(View view) {
                int wc = 4;
                if (spb.isChecked()){
-                   weatherParameters.setCityName(getString(R.string.city));
-                   weatherParameters.setTemp(getString(R.string.cityTemp));
-                   weatherParameters.setHumid(getString(R.string.cityHumid));
-                   weatherParameters.setPressue(getString(R.string.cityPressure));
-                   weatherParameters.setPrecep(getString(R.string.cityPrecep));
-                   weatherParameters.setwCond(Integer.parseInt(getString(R.string.cityCond)));
-                   weatherParameters.setFirstDayTemp(" +24");
-                   weatherParameters.setFirstNightTem(" +13");
-                   weatherParameters.setFirstDayCond(1);
-                   weatherParameters.setSecondDayTemp(" +25");
-                   weatherParameters.setSecondNightTem(" +15");
-                   weatherParameters.setSecondDayCond(1);
-                   weatherParameters.setThirdDayTemp(" +24");
-                   weatherParameters.setThirdNightTemp(" +16");
-                   weatherParameters.setThirdDayCond(4);
+                   weatherParameters = new WeatherParameters(getString(R.string.city), getString(R.string.cityTemp), getString(R.string.cityHumid),
+                           getString(R.string.cityPressure), getString(R.string.cityPrecep), 3," +24°С", " +13°С",
+                           1, "+25°С", "+15°С", 1,
+                           "+24°С", "+16°С", 4);
+                   Intent intent = new Intent();
+                   intent.putExtra(WEATHER, weatherParameters);
+                   setResult(RESULT_OK, intent);
+
                } else if (vilnius.isChecked()) {
-                   weatherParameters.setCityName(getString(R.string.cityV));
-                   weatherParameters.setTemp(getString(R.string.cityTempV));
-                   weatherParameters.setHumid(getString(R.string.cityHumidV));
-                   weatherParameters.setPressue(getString(R.string.cityPressureV));
-                   weatherParameters.setPrecep(getString(R.string.cityPrecepV));
-                   weatherParameters.setwCond(Integer.parseInt(getString(R.string.cityCondV)));
-                   weatherParameters.setFirstDayTemp(" +25");
-                   weatherParameters.setFirstNightTem(" +16");
-                   weatherParameters.setFirstDayCond(1);
-                   weatherParameters.setSecondDayTemp(" +26");
-                   weatherParameters.setSecondNightTem(" +15");
-                   weatherParameters.setSecondDayCond(1);
-                   weatherParameters.setThirdDayTemp(" +27");
-                   weatherParameters.setThirdNightTemp(" +17");
-                   weatherParameters.setThirdDayCond(5);
+                   weatherParameters = new WeatherParameters(getString(R.string.cityV), getString(R.string.cityTempV), getString(R.string.cityHumidV),
+                           getString(R.string.cityPressureV), getString(R.string.cityPrecepV), 2," +25°С", " +16°С",
+                           1, "+26°С", "+15°С", 1,
+                           "+27°С", "+17°С", 5);
+                   Intent intent = new Intent();
+                   intent.putExtra(WEATHER, weatherParameters);
+                   setResult(RESULT_OK, intent);
                } else if (tenerife.isChecked()) {
-                   weatherParameters.setCityName(getString(R.string.cityT));
-                   weatherParameters.setTemp(getString(R.string.cityTempT));
-                   weatherParameters.setHumid(getString(R.string.cityHumidT));
-                   weatherParameters.setPressue(getString(R.string.cityPressureT));
-                   weatherParameters.setPrecep(getString(R.string.cityPrecepT));
-                   weatherParameters.setwCond(Integer.parseInt(getString(R.string.cityCondT)));
-                   weatherParameters.setFirstDayTemp(" +31");
-                   weatherParameters.setFirstNightTem(" +24");
-                   weatherParameters.setFirstDayCond(5);
-                   weatherParameters.setSecondDayTemp(" +33");
-                   weatherParameters.setSecondNightTem(" +27");
-                   weatherParameters.setSecondDayCond(5);
-                   weatherParameters.setThirdDayTemp(" +31");
-                   weatherParameters.setThirdNightTemp(" +27");
-                   weatherParameters.setThirdDayCond(5);
+                   weatherParameters = new WeatherParameters(getString(R.string.cityT), getString(R.string.cityTempT), getString(R.string.cityHumidT),
+                           getString(R.string.cityPressureT), getString(R.string.cityPrecepT), 1," +31°С", " +24°С",
+                           5, "+33°С", "+27°С", 5,
+                           "+31°С", "+27°С", 5);
+                   Intent intent = new Intent();
+                   intent.putExtra(WEATHER, weatherParameters);
+                   setResult(RESULT_OK, intent);
                }
                 finish();
             }
@@ -131,5 +112,6 @@ public class CityActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "onResume#2", Toast.LENGTH_SHORT).show();
         Log.d("CityActivity", "onResume");
     }
+
 
 }

@@ -3,49 +3,40 @@ package rumigor.lesson1;
 import android.app.Application;
 import android.content.Context;
 
-public final class WeatherParameters {
-    private static WeatherParameters instance = null;
-    private String cityName = "Saint Petersburg";
-    private String temp = "+15.4";
-    private String humid = "78%";
-    private String pressue = "767 Hg mm";
-    private String precep = "Rain";
-    private int wCond = 4;
-    private String firstDayTemp = " +20";
-    private String firstNightTem = " +11";
-    private int firstDayCond = 1;
-    private String SecondDayTemp = " +21";
-    private String SecondNightTem = " +15";
-    private int SecondDayCond = 4;
-    private String ThirdDayTemp = " +22";
-    private String ThirdNightTemp = " +16";
-    private int ThirdDayCond = 2;
+import java.io.Serializable;
 
-    private WeatherParameters() {
+public class WeatherParameters implements Serializable {
+    private String cityName;
+    private String temp;
+    private String humid;
+    private String pressure;
+    private String precep;
+    private int wCond;
+    private String firstDayTemp;
+    private String firstNightTemp;
+    private int firstDayCond;
+    private String SecondDayTemp;
+    private String SecondNightTemp;
+    private int SecondDayCond;
+    private String ThirdDayTemp;
+    private String ThirdNightTemp;
+    private int ThirdDayCond;
 
-    }
-
-    public int getFirstDayCond() {
-        return firstDayCond;
-    }
-
-    public void setFirstDayCond(int firstDayCond) {
+    public WeatherParameters(String cityName, String temp, String humid, String pressure, String precep, int wCond, String firstDayTemp, String firstNightTemp, int firstDayCond, String secondDayTemp, String secondNightTemp, int secondDayCond, String thirdDayTemp, String thirdNightTemp, int thirdDayCond) {
+        this.cityName = cityName;
+        this.temp = temp;
+        this.humid = humid;
+        this.pressure = pressure;
+        this.precep = precep;
+        this.wCond = wCond;
+        this.firstDayTemp = firstDayTemp;
+        this.firstNightTemp = firstNightTemp;
         this.firstDayCond = firstDayCond;
-    }
-
-    public int getSecondDayCond() {
-        return SecondDayCond;
-    }
-
-    public void setSecondDayCond(int secondDayCond) {
+        SecondDayTemp = secondDayTemp;
+        SecondNightTemp = secondNightTemp;
         SecondDayCond = secondDayCond;
-    }
-
-    public int getThirdDayCond() {
-        return ThirdDayCond;
-    }
-
-    public void setThirdDayCond(int thirdDayCond) {
+        ThirdDayTemp = thirdDayTemp;
+        ThirdNightTemp = thirdNightTemp;
         ThirdDayCond = thirdDayCond;
     }
 
@@ -53,103 +44,60 @@ public final class WeatherParameters {
         return cityName;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
-    }
-
     public String getTemp() {
         return temp;
-    }
-
-    public void setTemp(String temp) {
-        this.temp = temp;
     }
 
     public String getHumid() {
         return humid;
     }
 
-    public void setHumid(String humid) {
-        this.humid = humid;
-    }
-
-    public String getPressue() {
-        return pressue;
-    }
-
-    public void setPressue(String pressue) {
-        this.pressue = pressue;
+    public String getPressure() {
+        return pressure;
     }
 
     public String getPrecep() {
         return precep;
     }
 
-    public void setPrecep(String precep) {
-        this.precep = precep;
-    }
-
     public int getwCond() {
         return wCond;
-    }
-
-    public void setwCond(int wCond) {
-        this.wCond = wCond;
     }
 
     public String getFirstDayTemp() {
         return firstDayTemp;
     }
 
-    public void setFirstDayTemp(String firstDayTemp) {
-        this.firstDayTemp = firstDayTemp;
+    public String getFirstNightTemp() {
+        return firstNightTemp;
     }
 
-    public String getFirstNightTem() {
-        return firstNightTem;
-    }
-
-    public void setFirstNightTem(String firstNightTem) {
-        this.firstNightTem = firstNightTem;
+    public int getFirstDayCond() {
+        return firstDayCond;
     }
 
     public String getSecondDayTemp() {
         return SecondDayTemp;
     }
 
-    public void setSecondDayTemp(String secondDayTemp) {
-        SecondDayTemp = secondDayTemp;
+    public String getSecondNightTemp() {
+        return SecondNightTemp;
     }
 
-    public String getSecondNightTem() {
-        return SecondNightTem;
-    }
-
-    public void setSecondNightTem(String secondNightTem) {
-        SecondNightTem = secondNightTem;
+    public int getSecondDayCond() {
+        return SecondDayCond;
     }
 
     public String getThirdDayTemp() {
         return ThirdDayTemp;
     }
 
-    public void setThirdDayTemp(String thirdDayTemp) {
-        ThirdDayTemp = thirdDayTemp;
-    }
-
     public String getThirdNightTemp() {
         return ThirdNightTemp;
     }
 
-    public void setThirdNightTemp(String thirdNightTemp) {
-        ThirdNightTemp = thirdNightTemp;
-    }
-
-    public static WeatherParameters getInstance() {
-        if (instance == null) {
-            instance = new WeatherParameters();
-        }
-        return instance;
+    public int getThirdDayCond() {
+        return ThirdDayCond;
     }
 }
 
