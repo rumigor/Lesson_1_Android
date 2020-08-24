@@ -17,7 +17,7 @@
     <string name="precipitation">Осадки:</string>
     <string name="condition">Состояние погоды:</string>
     <string name="weatherForecast">Прогноз погоды на три дня</string>
-    <string name="cityTemp">+15,4°С</string>
+    <string name="cityTemp">+15.4°С</string>
     <string name="cityHumid">78%</string>
     <string name="cityPressure">767 мм рт. ст.</string>
     <string name="cityPrecep">Дождь</string>
@@ -27,7 +27,7 @@
     <string name="cityPressureV">749 рт. ст.</string>
     <string name="cityPrecepV">нет</string>
     <string name="cityCondV">2</string>
-    <string name="cityTempT">+27,1°С</string>
+    <string name="cityTempT">+27.1°С</string>
     <string name="cityHumidT">58%</string>
     <string name="cityPressureT">738 рт. ст.</string>
     <string name="cityPrecepT">нет</string>
@@ -48,7 +48,7 @@
     <string name="show_wind_speed">Показать скорость ветра</string>
     <string name="show_sunrise_and_sunset_time">Показать время восхода и заката солнца</string>
     <string name="probability_of_precipitation">Вероятность осадков</string>
-    <string name="allergic_hazard_level">Уровень аллергической опасности</string>
+    <string name="allergic_hazard_level">Уровень ультрафиолета</string>
     <string name="settingsTitle">Настройки</string>
     <string name="save_settings">Сохранить</string>
     <string name="dark_theme">Темная тема</string>
@@ -56,4 +56,16 @@
     <string name="fahrenheit">Фаренгейт</string>
     <string name="celcius">Целсий</string>
     <string name="more_on_gismeteo">Больше на Гисметео</string>
+    <string name="wind">Ветер:</string>
+    <string name="sunrise">Восход:</string>
+    <string name="sunset">Закат:</string>
+    <string name="precepitaion">Осадки%:</string>
+    <string name="uv_level">УФ уровень:</string>
+    <string name="_4_m_s_sw">4 м/с, ЮВ</string>
+    <string name="_5_35">5:35</string>
+    <string name="_20_24">20:24</string>
+    <string name="_22">22%</string>
+    <string name="_1">1</string>
+    <string name="windV">6 м/с, З</string>
+    <string name="windT">5 м/с, ВЮВ</string>
 </resources>

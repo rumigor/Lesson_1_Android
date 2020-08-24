@@ -21,8 +21,14 @@ public class WeatherParameters implements Serializable {
     private String ThirdDayTemp;
     private String ThirdNightTemp;
     private int ThirdDayCond;
+    private String wind;
+    private String sunrise;
+    private String sunset;
+    private String precProb;
+    private String uvLevel;
 
-    public WeatherParameters(String cityName, String temp, String humid, String pressure, String precep, int wCond, String firstDayTemp, String firstNightTemp, int firstDayCond, String secondDayTemp, String secondNightTemp, int secondDayCond, String thirdDayTemp, String thirdNightTemp, int thirdDayCond) {
+
+    public WeatherParameters(String cityName, String temp, String humid, String pressure, String precep, int wCond, String firstDayTemp, String firstNightTemp, int firstDayCond, String secondDayTemp, String secondNightTemp, int secondDayCond, String thirdDayTemp, String thirdNightTemp, int thirdDayCond, String wind, String sunrise, String sunset, String precProb, String uvLevel) {
         this.cityName = cityName;
         this.temp = temp;
         this.humid = humid;
@@ -32,12 +38,37 @@ public class WeatherParameters implements Serializable {
         this.firstDayTemp = firstDayTemp;
         this.firstNightTemp = firstNightTemp;
         this.firstDayCond = firstDayCond;
-        SecondDayTemp = secondDayTemp;
-        SecondNightTemp = secondNightTemp;
-        SecondDayCond = secondDayCond;
-        ThirdDayTemp = thirdDayTemp;
-        ThirdNightTemp = thirdNightTemp;
-        ThirdDayCond = thirdDayCond;
+        this.SecondDayTemp = secondDayTemp;
+        this.SecondNightTemp = secondNightTemp;
+        this.SecondDayCond = secondDayCond;
+        this.ThirdDayTemp = thirdDayTemp;
+        this.ThirdNightTemp = thirdNightTemp;
+        this.ThirdDayCond = thirdDayCond;
+        this.wind = wind;
+        this.sunrise = sunrise;
+        this.sunset = sunset;
+        this.precProb = precProb;
+        this.uvLevel = uvLevel;
+    }
+
+    public String getWind() {
+        return wind;
+    }
+
+    public String getSunrise() {
+        return sunrise;
+    }
+
+    public String getSunset() {
+        return sunset;
+    }
+
+    public String getPrecProb() {
+        return precProb;
+    }
+
+    public String getUvLevel() {
+        return uvLevel;
     }
 
     public String getCityName() {

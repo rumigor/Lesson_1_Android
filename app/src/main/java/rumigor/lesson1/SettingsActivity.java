@@ -12,35 +12,67 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
-public class SettingsActivity extends AppCompatActivity {
+import static rumigor.lesson1.Constants.CELSIUS;
+import static rumigor.lesson1.Constants.NIGHT_THEME;
+
+public class SettingsActivity extends AppCompatActivity implements Constants {
     private Switch theme;
     private final String NIGHT_MODE = "Night_Mode";
     private final static int REQUEST_CODE = 0x1FAB;
+    boolean nightMode;
+    boolean celsius = true;
     ConstraintLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Toast.makeText(getApplicationContext(), "onCreate#3", Toast.LENGTH_SHORT).show();
         Log.d("SettingsActivity", "onCreate");
         setContentView(R.layout.activity_settings);
-        Button cancel = findViewById(R.id.resetButton);
         theme = findViewById(R.id.nightTheme);
         layout = findViewById(R.id.backgroundLayout);
+        nightMode = getIntent().getExtras().getBoolean(NIGHT_THEME);
+        celsius = getIntent().getExtras().getBoolean(CELSIUS);
+        RadioButton c = findViewById(R.id.celcius);
+        RadioButton f = findViewById(R.id.fahrenheit);
+        if (nightMode){
+            theme.setChecked(true);
+            layout.setBackgroundColor(Color.rgb(0, 85, 124));
+        }
+        if (celsius) {
+            c.setChecked(true);
+        }
+        else f.setChecked(true);
+        Button cancel = findViewById(R.id.resetButton);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SettingsActivity.this, MainActivity.class));
+                finish();
+            }
+        });
+        Button saveSet = findViewById(R.id.saveButton);
+        saveSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                nightMode = theme.isChecked();
+                celsius = c.isChecked();
+                intent.putExtra(NIGHT_THEME, nightMode).putExtra(CELSIUS, celsius);
+                setResult(100, intent);
+                finish();
             }
         });
         theme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (theme.isChecked()) {
-                    layout.setBackgroundColor(Color.BLUE);
+                    layout.setBackgroundColor(Color.rgb(0, 85, 124));
                 }
                 else {
                     layout.setBackgroundColor(Color.argb(100, 164, 221, 248));
@@ -103,8 +135,4 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void startActivityForResult(Intent intent, int requestCode) {
-        super.startActivityForResult(intent, requestCode);
-    }
 }
