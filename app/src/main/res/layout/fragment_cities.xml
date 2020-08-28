@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4DDF8"
+    tools:context=".CitiesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/citiesChoose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/city1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#3F51B5"
+                android:checked="false"
+                android:text="@string/city"
+                android:textColorHighlight="#E91E63"
+                android:textColorLink="#4CAF50"
+                android:textSize="18sp"
+                />
+
+            <RadioButton
+                android:id="@+id/city2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#3F51B5"
+                android:checked="false"
+                android:text="@string/cityV"
+                android:textColorHighlight="#E91E63"
+                android:textColorLink="#4CAF50"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/city3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="#3F51B5"
+                android:checked="false"
+                android:text="@string/cityT"
+                android:textColorHighlight="#E91E63"
+                android:textColorLink="#4CAF50"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

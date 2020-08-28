@@ -12,7 +12,7 @@
     <string name="cityT">Tenerife</string>
     <string name="temperature">Temperature(°C):</string>
     <string name="humidity">Humidity:</string>
-    <string name="pressure">Atmosphere pressure:</string>
+    <string name="pressure">Atm. pressure:</string>
     <string name="precipitation">Precipitation:</string>
     <string name="condition">Weather condition:</string>
     <string name="weatherForecast">Weather forecast for 3 days</string>
